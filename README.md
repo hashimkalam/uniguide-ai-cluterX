@@ -83,7 +83,7 @@ An intelligent platform that helps UK high school students predict their chances
 4. **Initialize database** (first time only):
    ```bash
    # Run locally
-   python init_db.py
+   python scripts/init_db.py
    ```
 
 5. **Ingest data**:
@@ -105,7 +105,7 @@ An intelligent platform that helps UK high school students predict their chances
 
 3. **Initialize database**:
    ```bash
-   python init_db.py
+   python scripts/init_db.py
    ```
 
 4. **Run data ingestion**:
@@ -215,10 +215,13 @@ uniguide-ai/
 │   │   ├── courses.py    # Course API endpoints
 │   │   └── admin.py      # Admin endpoints
 │   ├── services/
-│   │   ├── fetcher.py    # Data fetching utilities
 │   │   └── ingest.py     # Data ingestion service
 │   └── jobs/
 │       └── scheduler.py  # Background job scheduler
+├── scripts/              # Utility scripts
+│   ├── init_db.py       # Database initialization
+│   ├── inspect_db.py    # Database inspection
+│   └── test_db.py       # Database testing
 ├── data/                 # Discover Uni dataset
 ├── init_db.py           # Database initialization
 ├── requirements.txt     # Python dependencies
@@ -289,7 +292,7 @@ curl http://localhost:8000/api/v1/courses/BSRDIF-B821
 
 ```bash
 # Check data inspector
-python data/inpect/data_inspector.py
+python data/inspect/data_inspector.py
 ```
 
 ## Future Enhancements
